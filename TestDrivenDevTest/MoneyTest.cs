@@ -20,7 +20,10 @@ namespace TestDrivenDevTest
         public void TestEquality()
         {
             IsTrue(new Dollar(5).Equals(new Dollar(5)));
-            IsTrue(new Dollar(6).Equals(new Dollar(6)));
+            IsFalse(new Dollar(5).Equals(new Dollar(6)));
+            IsTrue(new Frunc(5).Equals(new Frunc(5)));
+            IsFalse(new Frunc(5).Equals(new Frunc(6)));
+            IsFalse(new Dollar(5).Equals(new Frunc(5)));
         }
         
         [Test]
