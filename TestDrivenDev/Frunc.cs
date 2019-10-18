@@ -2,10 +2,8 @@ using System;
 
 namespace TestDrivenDev
 {
-    public class Frunc
+    public class Frunc : Money
     {
-        private int amount;
-
         public Frunc(int amount)
         {
             this.amount = amount;
@@ -14,12 +12,6 @@ namespace TestDrivenDev
         public Frunc Times(int multiplier)
         {
             return new Frunc(amount * multiplier);
-        }
-        
-        public override bool Equals(object obj)
-        {
-            Frunc frunc = (Frunc) obj;
-            return amount == frunc.amount;
         }
     }
 }

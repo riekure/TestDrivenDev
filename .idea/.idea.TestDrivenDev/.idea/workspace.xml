@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98a8575d-cbbc-4f3c-867f-e607e21605ef" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.TestDrivenDev/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestDrivenDev/Money.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TestDrivenDev/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TestDrivenDev/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TestDrivenDev/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TestDrivenDev/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDrivenDev/Dollar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestDrivenDev/Dollar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDrivenDev/Frunc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestDrivenDev/Frunc.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDrivenDev/TestDrivenDev.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TestDrivenDev/TestDrivenDev.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDrivenDev/bin/Debug/TestDrivenDev.exe" beforeDir="false" afterPath="$PROJECT_DIR$/TestDrivenDev/bin/Debug/TestDrivenDev.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDrivenDev/bin/Debug/TestDrivenDev.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestDrivenDev/bin/Debug/TestDrivenDev.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDrivenDev/obj/Debug/TestDrivenDev.exe" beforeDir="false" afterPath="$PROJECT_DIR$/TestDrivenDev/obj/Debug/TestDrivenDev.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDrivenDev/obj/Debug/TestDrivenDev.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestDrivenDev/obj/Debug/TestDrivenDev.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDrivenDevTest/bin/Debug/TestDrivenDev.exe" beforeDir="false" afterPath="$PROJECT_DIR$/TestDrivenDevTest/bin/Debug/TestDrivenDev.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDrivenDevTest/bin/Debug/TestDrivenDev.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestDrivenDevTest/bin/Debug/TestDrivenDev.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDrivenDevTest/bin/Debug/TestDrivenDevTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestDrivenDevTest/bin/Debug/TestDrivenDevTest.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDrivenDevTest/obj/Debug/TestDrivenDevTest.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestDrivenDevTest/obj/Debug/TestDrivenDevTest.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDrivenDevTest/obj/Debug/TestDrivenDevTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TestDrivenDevTest/obj/Debug/TestDrivenDevTest.dll" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,15 +31,17 @@
     <setting file="file://$PROJECT_DIR$/TestDrivenDev/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TestDrivenDevTest/MoneyTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TestDrivenDev/Frunc.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TestDrivenDev/Money.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TestDrivenDev/Dollar.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/TestDrivenDevTest/Tests.cs" />
+        <option value="$PROJECT_DIR$/TestDrivenDevTest/MoneyTest.cs" />
+        <option value="$PROJECT_DIR$/TestDrivenDev/Money.cs" />
         <option value="$PROJECT_DIR$/TestDrivenDev/Dollar.cs" />
         <option value="$PROJECT_DIR$/TestDrivenDev/Frunc.cs" />
-        <option value="$PROJECT_DIR$/TestDrivenDevTest/MoneyTest.cs" />
       </list>
     </option>
   </component>
@@ -82,7 +97,7 @@
       <option name="presentableId" value="Default" />
       <updated>1571296244883</updated>
       <workItem from="1571296246271" duration="2963000" />
-      <workItem from="1571360507745" duration="1010000" />
+      <workItem from="1571360507745" duration="2751000" />
     </task>
     <task id="LOCAL-00001" summary="Riderからコミット">
       <created>1571363617363</created>
@@ -91,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571363617363</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Riderからコミット">
+      <created>1571363666032</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1571363666032</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
