@@ -1,0 +1,10 @@
+/Users/kikuchi_ryo/RiderProjects/TestDrivenDev/TestDrivenDevTest/bin/Debug/TestDrivenDevTest.dll
+/Users/kikuchi_ryo/RiderProjects/TestDrivenDev/TestDrivenDevTest/bin/Debug/TestDrivenDevTest.pdb
+/Users/kikuchi_ryo/RiderProjects/TestDrivenDev/TestDrivenDevTest/bin/Debug/nunit.framework.dll
+/Users/kikuchi_ryo/RiderProjects/TestDrivenDev/TestDrivenDevTest/bin/Debug/TestDrivenDev.exe
+/Users/kikuchi_ryo/RiderProjects/TestDrivenDev/TestDrivenDevTest/bin/Debug/TestDrivenDev.pdb
+/Users/kikuchi_ryo/RiderProjects/TestDrivenDev/TestDrivenDevTest/bin/Debug/nunit.framework.xml
+/Users/kikuchi_ryo/RiderProjects/TestDrivenDev/TestDrivenDevTest/obj/Debug/TestDrivenDevTest.csprojAssemblyReference.cache
+/Users/kikuchi_ryo/RiderProjects/TestDrivenDev/TestDrivenDevTest/obj/Debug/TestDrivenDevTest.csproj.CopyComplete
+/Users/kikuchi_ryo/RiderProjects/TestDrivenDev/TestDrivenDevTest/obj/Debug/TestDrivenDevTest.dll
+/Users/kikuchi_ryo/RiderProjects/TestDrivenDev/TestDrivenDevTest/obj/Debug/TestDrivenDevTest.pdb

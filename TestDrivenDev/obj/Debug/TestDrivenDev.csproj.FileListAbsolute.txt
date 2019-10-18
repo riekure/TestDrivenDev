@@ -1,0 +1,5 @@
+/Users/kikuchi_ryo/RiderProjects/TestDrivenDev/TestDrivenDev/bin/Debug/TestDrivenDev.exe
+/Users/kikuchi_ryo/RiderProjects/TestDrivenDev/TestDrivenDev/bin/Debug/TestDrivenDev.pdb
+/Users/kikuchi_ryo/RiderProjects/TestDrivenDev/TestDrivenDev/obj/Debug/TestDrivenDev.csprojAssemblyReference.cache
+/Users/kikuchi_ryo/RiderProjects/TestDrivenDev/TestDrivenDev/obj/Debug/TestDrivenDev.exe
+/Users/kikuchi_ryo/RiderProjects/TestDrivenDev/TestDrivenDev/obj/Debug/TestDrivenDev.pdb
