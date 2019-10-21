@@ -4,14 +4,13 @@ namespace TestDrivenDev
 {
     public class Dollar : Money
     {
-        public Dollar(int amoount)
+        public Dollar(int amount, string currency):base(amount, currency)
         {
-            amount = amoount;
         }
 
         public override Money Times(int multiplier)
         {
-            return new Dollar(amount * multiplier);
+            return Money.CreateDollar(Amount * multiplier);
         }
     }
 }

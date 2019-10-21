@@ -1,25 +1,39 @@
+using System;
+
 namespace TestDrivenDev
 {
     public abstract class Money
     {
-        public int amount;
+        protected int Amount;
+        protected string Currency;
 
+        public Money(int amount, string currency)
+        {
+            this.Amount = amount;
+            this.Currency = currency;
+        }
+        
         public abstract Money Times(int multiplier);
+
+        public string GetCurrency()
+        {
+            return Currency;
+        }
         
         public override bool Equals(object obj)
         {
             Money money = (Money) obj;
-            return amount == money.amount && GetType() == money.GetType();
+            return Amount == money.Amount && GetType() == money.GetType();
+        }
+        
+        public static Dollar CreateDollar(int amount)
+        {
+            return new Dollar(amount, "USD");
         }
 
-        static public Dollar _Dollar(int amount)
+        public static Franc CreateFranc(int amount)
         {
-            return new Dollar(amount);
-        }
-
-        static public Franc _Frunc(int amount)
-        {
-            return new Franc(amount);
+            return new Franc(amount, "CHF");
         }
     }
 }
