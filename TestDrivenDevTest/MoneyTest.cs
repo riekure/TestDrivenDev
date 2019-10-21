@@ -11,27 +11,27 @@ namespace TestDrivenDevTest
         [Test]
         public void TestMultiplication()
         {
-            Dollar five = new Dollar(5);
-            AreEqual(new Dollar(10), five.Times(2));
-            AreEqual(new Dollar(15), five.Times(3));
+            Money five = Money._Dollar(5);
+            AreEqual(Money._Dollar(10), five.Times(2));
+            AreEqual(Money._Dollar(15), five.Times(3));
         }
 
         [Test]
         public void TestEquality()
         {
-            IsTrue(new Dollar(5).Equals(new Dollar(5)));
-            IsFalse(new Dollar(5).Equals(new Dollar(6)));
-            IsTrue(new Frunc(5).Equals(new Frunc(5)));
-            IsFalse(new Frunc(5).Equals(new Frunc(6)));
-            IsFalse(new Dollar(5).Equals(new Frunc(5)));
+            IsTrue(Money._Dollar(5).Equals(Money._Dollar(5)));
+            IsFalse(Money._Dollar(5).Equals(Money._Dollar(6)));
+            IsTrue(Money._Frunc(5).Equals(new Franc(5)));
+            IsFalse(Money._Frunc(5).Equals(new Franc(6)));
+            IsFalse(Money._Frunc(5).Equals(Money._Dollar(5)));
         }
         
         [Test]
-        public void TestFruncMultiplication()
+        public void TestFrancMultiplication()
         {
-            Frunc five = new Frunc(5);
-            AreEqual(new Frunc(10), five.Times(2));
-            AreEqual(new Frunc(15), five.Times(3));
+            Franc five = Money._Frunc(5);
+            AreEqual(Money._Frunc(10), five.Times(2));
+            AreEqual(Money._Frunc(15), five.Times(3));
         }
     }
 }
