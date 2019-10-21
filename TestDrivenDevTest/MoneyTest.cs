@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 using NUnit.Framework;
 using TestDrivenDev;
 using static NUnit.Framework.Assert;
@@ -29,7 +30,7 @@ namespace TestDrivenDevTest
         [Test]
         public void TestFrancMultiplication()
         {
-            Franc five = Money.CreateFranc(5);
+            Money five = Money.CreateFranc(5);
             AreEqual(Money.CreateFranc(10), five.Times(2));
             AreEqual(Money.CreateFranc(15), five.Times(3));
         }
@@ -39,6 +40,12 @@ namespace TestDrivenDevTest
         {
             AreEqual("USD", Money.CreateDollar(1).GetCurrency());
             AreEqual("CHF", Money.CreateFranc(1).GetCurrency());
+        }
+
+        [Test]
+        public void TestDifferentClassEquality()
+        {
+            IsTrue(new Money(10, "CHF").Equals(new Franc(10, "CHF")));
         }
     }
 }

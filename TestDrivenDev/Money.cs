@@ -2,7 +2,7 @@ using System;
 
 namespace TestDrivenDev
 {
-    public abstract class Money
+    public class Money
     {
         protected int Amount;
         protected string Currency;
@@ -12,8 +12,11 @@ namespace TestDrivenDev
             this.Amount = amount;
             this.Currency = currency;
         }
-        
-        public abstract Money Times(int multiplier);
+
+        public Money Times(int multiplier)
+        {
+            return new Money(Amount * multiplier, Currency);
+        }
 
         public string GetCurrency()
         {
@@ -23,7 +26,12 @@ namespace TestDrivenDev
         public override bool Equals(object obj)
         {
             Money money = (Money) obj;
-            return Amount == money.Amount && GetType() == money.GetType();
+            return Amount == money.Amount && GetCurrency().Equals(money.GetCurrency());
+        }
+
+        public string To_string()
+        {
+            return Amount + " " + Currency;
         }
         
         public static Dollar CreateDollar(int amount)
