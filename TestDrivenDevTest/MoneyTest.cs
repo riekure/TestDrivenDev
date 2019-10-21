@@ -22,17 +22,7 @@ namespace TestDrivenDevTest
         {
             IsTrue(condition: Money.CreateDollar(5).Equals(Money.CreateDollar(5)));
             IsFalse(Money.CreateDollar(5).Equals(Money.CreateDollar(6)));
-            IsTrue(Money.CreateFranc(5).Equals(Money.CreateFranc(5)));
-            IsFalse(Money.CreateFranc(5).Equals(Money.CreateFranc(6)));
             IsFalse(Money.CreateFranc(5).Equals(Money.CreateDollar(5)));
-        }
-        
-        [Test]
-        public void TestFrancMultiplication()
-        {
-            Money five = Money.CreateFranc(5);
-            AreEqual(Money.CreateFranc(10), five.Times(2));
-            AreEqual(Money.CreateFranc(15), five.Times(3));
         }
 
         [Test]
@@ -40,12 +30,6 @@ namespace TestDrivenDevTest
         {
             AreEqual("USD", Money.CreateDollar(1).GetCurrency());
             AreEqual("CHF", Money.CreateFranc(1).GetCurrency());
-        }
-
-        [Test]
-        public void TestDifferentClassEquality()
-        {
-            IsTrue(new Money(10, "CHF").Equals(new Franc(10, "CHF")));
         }
     }
 }

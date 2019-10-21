@@ -34,14 +34,14 @@ namespace TestDrivenDev
             return Amount + " " + Currency;
         }
         
-        public static Dollar CreateDollar(int amount)
+        public static Money CreateDollar(int amount)
         {
-            return new Dollar(amount, "USD");
+            return new Money(amount, "USD");
         }
 
-        public static Franc CreateFranc(int amount)
+        public static Money CreateFranc(int amount)
         {
-            return new Franc(amount, "CHF");
+            return new Money(amount, "CHF");
         }
     }
 }
