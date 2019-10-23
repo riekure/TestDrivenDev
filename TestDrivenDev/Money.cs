@@ -2,7 +2,7 @@ using System;
 
 namespace TestDrivenDev
 {
-    public class Money
+    public class Money : IExpression
     {
         protected int Amount;
         protected string Currency;
@@ -16,6 +16,11 @@ namespace TestDrivenDev
         public Money Times(int multiplier)
         {
             return new Money(Amount * multiplier, Currency);
+        }
+
+        public IExpression Plus(Money addend)
+        {
+            return new Money(Amount + addend.Amount, Currency);
         }
 
         public string GetCurrency()

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 using NUnit.Framework;
 using TestDrivenDev;
@@ -30,6 +31,16 @@ namespace TestDrivenDevTest
         {
             AreEqual("USD", Money.CreateDollar(1).GetCurrency());
             AreEqual("CHF", Money.CreateFranc(1).GetCurrency());
+        }
+
+        [Test]
+        public void TempSimpleAddition()
+        {
+            Money five = Money.CreateDollar(5);
+            IExpression sum = five.Plus(five);
+            Bank bank = new Bank();
+            Money reduced = bank.reduce(sum, "USD");
+            AreEqual(Money.CreateDollar(10), reduced);
         }
     }
 }
