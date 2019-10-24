@@ -2,6 +2,6 @@ namespace TestDrivenDev
 {
     public interface IExpression
     {
-        Money Reduce(string to);
+        Money Reduce(Bank bank, string to);
     }
 }

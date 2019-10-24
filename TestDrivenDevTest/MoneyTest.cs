@@ -62,5 +62,20 @@ namespace TestDrivenDevTest
             Money result = bank.Reduce(sum, "USD");
             AreEqual(Money.CreateDollar(7), result);
         }
+
+        [Test]
+        public void TestReduceMoneyDifferentCurrency()
+        {
+            Bank bank = new Bank();
+            bank.AddRate("CHF", "USD", 2);
+            Money result = bank.Reduce(Money.CreateFranc(2), "USD");
+            AreEqual(Money.CreateDollar(1), result);
+        }
+
+        [Test]
+        public void TestIdentityRate()
+        {
+            AreEqual(1, new Bank().Rate("USD", "USD"));
+        }
     }
 }

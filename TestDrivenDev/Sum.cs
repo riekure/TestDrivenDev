@@ -14,7 +14,7 @@ namespace TestDrivenDev
             this.addend = addend;
         }
 
-        public Money Reduce(string to)
+        public Money Reduce(Bank bank, string to)
         {
             int amount = augend.Amount + addend.Amount;
             return new Money(amount, to);
