@@ -4,7 +4,7 @@ namespace TestDrivenDev
 {
     public class Money : IExpression
     {
-        protected int Amount;
+        public int Amount;
         protected string Currency;
 
         public Money(int amount, string currency)
@@ -20,7 +20,12 @@ namespace TestDrivenDev
 
         public IExpression Plus(Money addend)
         {
-            return new Money(Amount + addend.Amount, Currency);
+            return new Sum(this, addend);
+        }
+
+        public Money Reduce(string to)
+        {
+            return this;
         }
 
         public string GetCurrency()

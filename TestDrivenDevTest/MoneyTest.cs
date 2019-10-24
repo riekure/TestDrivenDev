@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Net.Configuration;
 using System.Runtime.InteropServices;
 using NUnit.Framework;
 using TestDrivenDev;
@@ -39,8 +40,27 @@ namespace TestDrivenDevTest
             Money five = Money.CreateDollar(5);
             IExpression sum = five.Plus(five);
             Bank bank = new Bank();
-            Money reduced = bank.reduce(sum, "USD");
+            Money reduced = bank.Reduce(sum, "USD");
             AreEqual(Money.CreateDollar(10), reduced);
+        }
+
+        [Test]
+        public void TestPlusReturnsSum()
+        {
+            Money five = Money.CreateDollar(5);
+            IExpression result = five.Plus(five);
+            Sum sum = (Sum) result;
+            AreEqual(five, sum.augend);
+            AreEqual(five, sum.addend);
+        }
+
+        [Test]
+        public void TestReduceSum()
+        {
+            IExpression sum = new Sum(Money.CreateDollar(3), Money.CreateDollar(4));
+            Bank bank = new Bank();
+            Money result = bank.Reduce(sum, "USD");
+            AreEqual(Money.CreateDollar(7), result);
         }
     }
 }
