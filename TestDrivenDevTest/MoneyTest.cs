@@ -89,5 +89,29 @@ namespace TestDrivenDevTest
             Money result = bank.Reduce(fiveBucks.Plus(tenFranc), "USD");
             AreEqual(Money.CreateDollar(10), result);
         }
+
+        [Test]
+        public void TestSumPlusMoney()
+        {
+            IExpression fiveBucks = Money.CreateDollar(5);
+            IExpression tenFrancs = Money.CreateFranc(10);
+            Bank bank = new Bank();
+            bank.AddRate("CHF", "USD", 2);
+            IExpression sum = new Sum(fiveBucks, tenFrancs).Plus(fiveBucks);
+            Money result = bank.Reduce(sum, "USD");
+            AreEqual(Money.CreateDollar(15), result);
+        }
+
+        [Test]
+        public void TestSumTimes()
+        {
+            IExpression fiveBucks = Money.CreateDollar(5);
+            IExpression tenFrancs = Money.CreateFranc(10);
+            Bank bank = new Bank();
+            bank.AddRate("CHF", "USD", 2);
+            IExpression sum = new Sum(fiveBucks, tenFrancs).Times(2);
+            Money result = bank.Reduce(sum, "USD");
+            AreEqual(Money.CreateDollar(20), result);
+        }
     }
 }

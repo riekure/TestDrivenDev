@@ -16,13 +16,18 @@ namespace TestDrivenDev
 
         public IExpression Plus(IExpression added)
         {
-            return null;
+            return new Sum(this, added);
         }
 
         public Money Reduce(Bank bank, string to)
         {
             int amount = augend.Reduce(bank, to).Amount + addend.Reduce(bank, to).Amount;
             return new Money(amount, to);
+        }
+
+        public IExpression Times(int multiplier)
+        {
+            return new Sum(augend.Times(multiplier), addend.Times(multiplier));
         }
     }
 }
