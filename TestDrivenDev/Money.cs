@@ -13,12 +13,12 @@ namespace TestDrivenDev
             this.Currency = currency;
         }
 
-        public Money Times(int multiplier)
+        public IExpression Times(int multiplier)
         {
             return new Money(Amount * multiplier, Currency);
         }
 
-        public IExpression Plus(Money addend)
+        public IExpression Plus(IExpression addend)
         {
             return new Sum(this, addend);
         }

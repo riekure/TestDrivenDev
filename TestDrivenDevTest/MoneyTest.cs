@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Net.Configuration;
 using System.Runtime.InteropServices;
+using System.Runtime.InteropServices.ComTypes;
 using NUnit.Framework;
 using TestDrivenDev;
 using static NUnit.Framework.Assert;
@@ -76,6 +77,17 @@ namespace TestDrivenDevTest
         public void TestIdentityRate()
         {
             AreEqual(1, new Bank().Rate("USD", "USD"));
+        }
+
+        [Test]
+        public void TestMixedAddition()
+        {
+            IExpression fiveBucks = Money.CreateDollar(5);
+            IExpression tenFranc = Money.CreateFranc(10);
+            Bank bank = new Bank();
+            bank.AddRate("CHF", "USD", 2);
+            Money result = bank.Reduce(fiveBucks.Plus(tenFranc), "USD");
+            AreEqual(Money.CreateDollar(10), result);
         }
     }
 }
