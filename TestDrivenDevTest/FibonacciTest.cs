@@ -16,7 +16,7 @@ namespace TestDrivenDevTest
         [Test]
         public void TestFibonacci()
         {
-            int[,] cases = new int[,] { { 0, 0 }, { 1, 1 }, { 2, 1 }, {3, 2} };
+            int[,] cases = { { 0, 0 }, { 1, 1 }, { 2, 1 }, {3, 2} };
             for (int i = 0; i < cases.GetLength(0); i++)
             {
                 Assert.AreEqual(cases[i, 1], Fib(cases[i, 0]));
